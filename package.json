@@ -1,11 +1,11 @@
 {
   "name": "vue-start-pack",
   "version": "0.0.1",
-  "description": "vue-start-pack webpack-dev-server --hot",
+  "description": "vue-start-pack webpack-dev-server --hot --inline --progress --port 8080 --host 0.0.0.0",
   "main": "server.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --hot && node server.js"
+    "start": "webpack-dev-server --hot --port 8080 --host 0.0.0.0 && node server.js"
   },
   "dependencies": {
     "express": "^4.16.3",
