@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.vue', '.css', '.stylus'],
@@ -17,7 +18,10 @@ module.exports = {
     }
   },
   devServer: {
-    disableHostCheck: true
+    disableHostCheck: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    }
   },
   module: {
     rules: [

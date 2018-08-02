@@ -1,14 +1,14 @@
-var express = require('express');
-var app = express();
-
-app.use(express.static('public'));
+var express = require('express')
+var app = express()
+var port = 8080 // process.env.PORT
+app.use(express.static('public'))
 
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
+  response.sendFile(__dirname + '/views/index.html')
 });
 
 
-var listener = app.listen(process.env.PORT, function() {
-  console.log('Your app is listening on port ' + listener.address().port);
+var listener = app.listen(port, function() {
+  console.log('*** listening on port: ' + port + ' ***')
 })
